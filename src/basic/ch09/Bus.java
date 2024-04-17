@@ -26,3 +26,5 @@ public class Bus {
 		System.out.println("수입 " + money);
 	}
 }
+
+
