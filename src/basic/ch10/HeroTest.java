@@ -17,6 +17,8 @@ public class HeroTest {
 		hero1.setHp(1000);
 		hero1.setPower(100);
 		hero1.setDefense(50);
+		
+		
 		name = hero1.getName();
 		hp = hero1.getHp();
 		power = hero1.getPower();
