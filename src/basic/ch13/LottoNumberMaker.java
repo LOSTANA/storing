@@ -1,4 +1,4 @@
-package basic.ex13;
+package basic.ch13;
 
 import java.util.Random;
 
