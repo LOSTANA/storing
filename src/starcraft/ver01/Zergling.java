@@ -38,13 +38,13 @@ public class Zergling {
 	}
 
 	// 저글링이 마린을 공격합니다
-	public void attackMarine(Marine m) {
+	public void attack(Marine m) {
 		System.out.println(this.name + " 이 " + m.getName() + " 을 공격합니다");
 		m.beAttacked(this.power);
 	}
 
 	// 저글링이 질럿을 공격합니다
-	public void attackZealot(Zealot z) {
+	public void attack(Zealot z) {
 		System.out.println(this.name + " 이 " + z.getName() + " 을 공격합니다");
 		z.beAttacked(this.power);
 	}

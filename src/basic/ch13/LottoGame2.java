@@ -1,16 +1,18 @@
 package basic.ch13;
 
+import java.util.Random;
+
 public class LottoGame2 {
 
 	public static void main(String[] args) {
 		// static 변수 --> 클래스 변수라고도 한다
 		
-		int gameNumber1 = LottoNumberMaker.makeNumber();
-		int gameNumber2 = LottoNumberMaker.makeNumber();
-		int gameNumber3 = LottoNumberMaker.makeNumber();
-		int gameNumber4 = LottoNumberMaker.makeNumber();
-		int gameNumber5 = LottoNumberMaker.makeNumber();
-		int gameNumber6 = LottoNumberMaker.makeNumber();
+		int[] gameNumber1 = makeNumber();
+		int[] gameNumber2 = makeNumber();
+		int[] gameNumber3 = makeNumber();
+		int[] gameNumber4 = makeNumber();
+		int[] gameNumber5 = makeNumber();
+		int[] gameNumber6 = makeNumber();
 // 전체 1~6까지 나온 결과값을 오름차순으로 정렬
 //단, 중복값 제외
 		
@@ -63,5 +65,28 @@ public class LottoGame2 {
 
 		
 	}
+	public static int[] makeNumber() {
+		// static 함수안에 멤버 변수를 사용할 수 없다
+		// 메모리가 뜨는 순서 !!
+		// System.out.println("ver : " + version);
+		// 자바 도구 -- 표준 API
+		// 난수 발생기 -- > 랜덤적인 값 생성
+		int[] numbers = new int[6];
+		Random random = new Random();
+		for (int i = 0; i < 6; i++) {
+			int resultNumber = random.nextInt(45) + 1;
+			for (int j = 0; j < i; j++) {
+				numbers[i] = resultNumber;
+				if (numbers[i] == numbers[j]) {
+					i--;
+				}
+			}
+
+		}
+
+		return numbers;
+	}
+	
+	
 
 }

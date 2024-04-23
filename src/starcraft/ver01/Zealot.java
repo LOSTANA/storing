@@ -25,13 +25,13 @@ public class Zealot {
 	}
 
 	// 질럿이 저글링을 공격합니다
-	public void attackZergling(Zergling z) {
+	public void attack(Zergling z) {
 		System.out.println(this.name + " 이 " + z.getName() + " 을 공격합니다");
 		z.beAttacked(this.power);
 	}
 
 	// 질럿이 마린을 공격합니다
-	public void attackMarine(Marine m) {
+	public void attack(Marine m) {
 		System.out.println(this.name + " 이 " + m.getName() + " 을 공격합니다");
 		m.beAttacked(this.power);
 	}

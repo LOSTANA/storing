@@ -1,17 +1,12 @@
-package starcraft.ver01;
+package starcraft.ver02;
 
-public class Marine {
+public class Zergling {
 
 	private String name;
 	private int power;
 	private int hp;
-	
-	public Marine(String name) {
-		this.name = name;
-		hp = 70;
-		power = 4;
-	}
 
+	// get set 단축키 - alt + shift + f
 	public String getName() {
 		return name;
 	}
@@ -35,14 +30,20 @@ public class Marine {
 	public void setHp(int hp) {
 		this.hp = hp;
 	}
-
-	// 마린이 저글링을 공격합니다
-	public void attack(Zergling z) {
-		System.out.println(this.name + " 이 " + z.getName() + " 을 공격합니다");
-		z.beAttacked(this.power);
+	
+	public Zergling(String name) {
+		this.name = name;
+		hp = 40;
+		power = 2;
 	}
 
-	// 마린이 질럿을 공격합니다
+	// 저글링이 마린을 공격합니다
+	public void attack(Marine m) {
+		System.out.println(this.name + " 이 " + m.getName() + " 을 공격합니다");
+		m.beAttacked(this.power);
+	}
+
+	// 저글링이 질럿을 공격합니다
 	public void attack(Zealot z) {
 		System.out.println(this.name + " 이 " + z.getName() + " 을 공격합니다");
 		z.beAttacked(this.power);
@@ -60,7 +61,7 @@ public class Marine {
 		}
 		hp -= power;
 	}
-
+	
 	public void showInfo() {
 		System.out.println("====  상태창  ====");
 		System.out.println("이름 : " + this.name);
