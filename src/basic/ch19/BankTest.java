@@ -13,7 +13,7 @@ public class BankTest {
 		System.out.println("=======================");
 		//enum type연습
 		bank.provideService(ServiceType.ACCOUNT_INFO, customer);
-		bank.provideService(ServiceType.WITHDRAW, customer);
+		bank.provideService(ServiceType.WHAT, customer);
 	}
 
 }

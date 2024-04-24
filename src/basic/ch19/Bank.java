@@ -23,7 +23,7 @@ public class Bank {
 			System.out.println(customer.getName() + " 입금을 진행 합니다");
 			break;
 		case WITHDRAW:
-			System.out.println(customer.getName() + "출금을 진행 합니다");
+			System.out.println(customer.getName() + " 출금을 진행 합니다");
 			break;
 		default:
 			System.out.println("해당 서비스는 제공하지 않습니다");

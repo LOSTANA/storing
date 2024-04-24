@@ -1,4 +1,5 @@
 package basic.ch17;
+
 /*
  * OOP란?
  * 객체와 객체간에 관계를 형성하고
@@ -12,9 +13,7 @@ public class CTest {
 
 		C c = new C();
 		c.name = "A";
-		
-		
-		
-	}//end of main
+
+	}// end of main
 
 }// end of class
